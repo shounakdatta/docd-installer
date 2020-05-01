@@ -1,22 +1,33 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "docd-installer",
+  "version": "0.0.1",
+  "description": "Electron application to install DoCD and its dependencies",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "repository": "",
+  "keywords": [],
+  "author": "Shounak Datta",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "^8.2.4"
+    "cross-env": "^7.0.2",
+    "electron": "^8.2.4",
+    "electron-builder": "^22.6.0"
+  },
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "electron-ipc-stream": "^0.2.0",
+    "electron-reload": "^1.5.0",
+    "node-powershell": "^4.0.0"
+  },
+  "build": {
+    "appId": "com.docd.installer",
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico"
+    }
   }
 }

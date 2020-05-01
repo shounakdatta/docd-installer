@@ -1,0 +1,57 @@
+.install-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "MyRoboto", "sans-serif";
+  font-weight: 100;
+}
+
+.install-container .header {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.install-container .header img {
+  height: 80%;
+}
+
+.install-container .controls {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.install-container .controls #finishBtn {
+  display: none;
+}
+
+.install-container .details {
+  width: 80%;
+  max-height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+/* .install-container .details p {
+  width: 100%;
+  height: 100%;
+} */
+
+.install-container .cssProgress {
+  width: 100%;
+}
+
+.install-container #loadingBar {
+  width: 100%;
+}

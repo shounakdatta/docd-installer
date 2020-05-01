@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';"
+    />
+    <meta
+      http-equiv="X-Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';"
+    />
+    <title>DoCD Installer</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../vendor/cssprogress.css" />
+    <link rel="stylesheet" href="../css/master.css" />
+    <link rel="stylesheet" href="../css/install.css" />
+  </head>
+  <body>
+    <div class="install-container">
+      <div class="header">
+        <img src="../media/DoCD-logo-transparent.png" alt="DoCD-logo" />
+      </div>
+      <div id="installForm" class="form">
+        <label class="label-container"
+          >Add DoCD CLI to PATH
+          <input
+            type="checkbox"
+            checked="checked"
+            name="pathBox"
+            id="pathBox"
+          />
+          <span class="checkmark"></span>
+        </label>
+        <label class="label-container"
+          >Install Chocolatey
+          <input
+            type="checkbox"
+            checked="checked"
+            name="chocoBox"
+            id="chocoBox"
+          />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div id="installDetails" class="details">
+        <p>Installing...</p>
+        <div id="loadingBarContainer" class="cssProgress">
+          <div class="progress1">
+            <div
+              id="loadingBar"
+              class="cssProgress-bar cssProgress-active"
+              data-percent="100"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <input id="installBtn" type="button" class="button" value="Install" />
+        <input id="cancelBtn" type="button" class="button" value="Cancel" />
+        <input id="finishBtn" type="button" class="button" value="Finish" />
+      </div>
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="../renderer.js"></script>
+    <script src="../scripts/install.js"></script>
+  </body>
+</html>
